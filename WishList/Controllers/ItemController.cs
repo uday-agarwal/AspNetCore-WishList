@@ -14,6 +14,11 @@ namespace WishList.Controllers
             _context = context;
         }
 
+        public IActionResult Index()
+        {
+            return View("Index", _context.Items);
+        }
+
         [HttpGet]
         public IActionResult Create()
         {
